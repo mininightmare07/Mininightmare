@@ -1,0 +1,342 @@
+/* box sizing */
+* {
+    box-sizing: border-box;
+}
+
+/* random colors to help visualize */
+:root {
+    --page-bg: #767575;
+    --main-bg: #cdcdcd;
+    --panel-bg: #fffaf2;
+    --dark-line: hsl(0, 0%, 0%);
+    --text-color: #1b1b1b;
+    --accent-color: #a81f1f;
+}
+
+/* styling */
+body {
+    margin: 0;
+    min-height: 100vh;
+    display: grid;
+    place-items: center;
+    background: var(--page-bg);
+    color: var(--text-color);
+}
+
+/* main page */
+main.page {
+    width: min(1200px, 92vw);
+    min-height: 760px;
+    display: flex;
+    gap: 1.75rem;
+    padding: 1.5rem;
+    background: var(--main-bg);
+    border: 2px solid var(--dark-line);
+    box-shadow: 0 12px 35px rgba(0, 0, 0, 0.25);
+}
+
+/* columns*/
+.left-column,
+.middle-column,
+.right-column {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+/* sizes */
+.left-column {
+    flex: 1.08;
+}
+
+.middle-column {
+    flex: 1.22;
+}
+
+.right-column {
+    flex: 0.7;
+    justify-content: flex-end;
+}
+
+/* boxes */
+.logo-box,
+.portrait-box,
+.tagline-box,
+.gallery-box,
+.order-box,
+.contact-box,
+.background-text {
+    background: var(--panel-bg);
+    border: 2px solid var(--dark-line);
+    padding: 1rem;
+}
+
+/* Top-left heading only the logo */
+h1 {
+    font-family: "Cinzel Decorative", serif;
+    font-size: 2rem;
+    margin-top: 0;
+    margin-bottom: 0rem;
+    color: var(--accent-color);
+    letter-spacing: 1px;
+}
+
+/* Every other heading */
+h2 {
+    font-family: "New Rocker", system-ui;
+    font-size: 1.35rem;
+    font-weight: 400;
+    font-style: normal;
+    margin-top: 0;
+    margin-bottom: 0rem;
+    color: var(--accent-color);
+    letter-spacing: 1px;
+}
+
+/* Paragraphs-Almendra */
+p {
+    font-family: "Almendra", serif;
+    font-size: 1.05rem;
+    line-height: 1.5;
+    margin: 0;
+}
+
+/* name and slogan */
+.logo-box {
+    min-height: 160px;
+    background: transparent;
+    border: none;
+}
+.logo-box p {
+    font-family: "Island Moments", cursive;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 40px;
+}
+
+/* background */
+.background-text {
+    min-height: 120px;
+    background: transparent;
+    border: none;
+}
+
+/* Portrait and About Me area */
+.portrait-box {
+    width: 82%;
+    height: 480px;
+    margin-left: 25px;
+    border: 4px solid black;
+    background-color: #b8b8b8;
+    min-height: 400px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+
+    margin-top: auto;
+}
+
+/* welcome */
+.tagline-box {
+    min-height: 170px;
+}
+
+/* gallery photos not yet there */
+.gallery-box {
+    min-height: 550px;
+    
+  
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+    padding-bottom: 2rem;
+}
+
+.gallery-button {
+    font-family: "New Rocker", system-ui;
+    display: inline-block;
+    padding: 0.75rem 1.2rem;
+    background: var(--accent-color);
+    color: white;
+    text-decoration: none;
+    border: 2px solid var(--dark-line);
+    font-size: 1rem;
+}
+
+.gallery-button:hover {
+    background: #2f1d17;
+}
+
+/* Right sections */
+.order-box,
+.contact-box {
+    min-height: 120px;
+    text-decoration: none;
+    color: var(--text-color);
+    cursor: pointer;
+}
+
+.order-box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.contact-box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.order-box:hover,
+.contact-box:hover {
+    background: var(--accent-color);
+}
+
+.order-box:hover h2,
+.contact-box:hover h2 {
+    color: white;
+}
+
+/* The only button on the page */
+.about-button {
+   font-family: "New Rocker", system-ui;
+    display: inline-block;
+    width: fit-content;
+    margin-top: 1rem;
+    padding: 0.75rem 1.2rem;
+    background: var(--accent-color);
+    color: white;
+    text-decoration: none;
+    border: 2px solid var(--dark-line);
+    font-size: 1rem;
+}
+
+/* change color hover */
+.about-button:hover {
+    background: #2f1d17;
+}
+/* ABOUT ME */
+
+.about-page-body {
+    margin: 0;
+    min-height: 100vh;
+    display: grid;
+    place-items: center;
+    background: #767575;
+    color: var(--text-color);
+}
+
+.about-page {
+    width: min(1050px, 92vw);
+    min-height: 680px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2.5rem;
+    padding: 3rem;
+    background: #fffaf2;
+    border: 2px solid var(--dark-line);
+    box-shadow: 0 12px 35px rgba(0, 0, 0, 0.25);
+}
+
+.about-text-side {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+/* Top text box: New Rocker */
+.about-title-text {
+    background: transparent;
+    border: none;
+    padding: 0;
+    margin-bottom: 1rem;
+}
+
+.about-title-text h1 {
+    font-family: "New Rocker", system-ui;
+    font-size: 2rem;
+    font-weight: 400;
+    color: var(--accent-color);
+    margin: 0;
+    letter-spacing: 1px;
+}
+
+/* Middle text box: Island Moments */
+.about-script-text {
+    background: transparent;
+    border: none;
+    padding: 0;
+    margin-bottom: 1.5rem;
+}
+
+.about-script-text p {
+    font-family: "Island Moments", cursive;
+    font-size: 2rem;
+    line-height: 1;
+    color: #2f1d17;
+    margin: 0;
+}
+.quote-text {
+    font-size: 1.05rem;
+}
+
+.quote-credit {
+    font-size: 1.5rem;
+    display: block;
+    margin-top: 0.4rem;
+    text-align: right;
+}
+/* Bottom text box: Almendra */
+.about-body-text {
+    background: transparent;
+    border: none;
+    padding: 0;
+}
+
+.about-body-text p {
+    font-family: "Almendra", serif;
+    font-size: 1.05rem;
+    line-height: 1.5;
+    margin-bottom: 1rem;
+}
+
+.about-image-side {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.about-photo-frame {
+    width: 100%;
+    max-width: 390px;
+    height: 540px;
+    background: #b8b8b8;
+    border: none;
+    overflow: hidden;
+}
+
+
+/* Responsive version */
+@media (max-width: 800px) {
+    .about-page {
+        grid-template-columns: 1fr;
+        padding: 2rem;
+    }
+
+    .about-image-side {
+        order: -1;
+    }
+
+    .about-photo-frame {
+        height: 420px;
+    }
+
+    .about-script-text p {
+        font-size: 2.5rem;
+    }
+}
